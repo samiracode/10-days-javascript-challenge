@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Be Or Not To Be</title>
+</head>
+<body>
+    <script>
+        const expect = function(val) {
+            return 
+                function toBe (val2) {
+                    if(val === val2) {
+                        return { "value" : true}
+                    } else {
+                        return { "error" : "Not Equal"}
+                    }
+                }
+            
+        }
+      
+
+        console.log(expect(5).toBe(5))
+    </script>
+</body>
+</html>
